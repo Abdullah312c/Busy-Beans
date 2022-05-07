@@ -1,3 +1,2 @@
 # Busy-Beans
-Busy beans coffeeshop
-Show the type of coffee that busy beans make with their prices and acounts to contact with the coffeeshop owners
+This website Show the type of coffee that busy beans coffeeshop makes with their prices and also acounts to contact with the coffeeshop owners
