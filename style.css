@@ -1,0 +1,641 @@
+:root {
+    --primary: hsla(0, 0%, 0%, .7);
+    --secondary: hsl(6, 78%, 57%, .7);
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+/* header */
+header {
+    width: 100%;
+    height: 4rem;
+    z-index: 999;
+    display: flex;
+    background-color: rgb(85, 33, 14);
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+}
+
+header a {
+    padding: 1.5rem 2rem;
+    text-decoration: none;
+    color: rgb(150, 64, 64);
+    transition: .7s;
+}
+
+header .navigation a:hover {
+    color: rgb(49, 2, 2);;
+}
+
+.navigation {
+    font-size: 2rem;
+}
+
+#logo {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: rgb(150, 64, 64);
+}
+
+#logo span {
+    font-size: 2.9rem;
+    color: rgb(196, 15, 15);
+}
+/* end of header */
+
+/* about */
+.about {
+    min-height: 100vh;
+    position: relative;
+    padding: 10.5rem 8rem 5.5rem;
+    background: linear-gradient(135deg, var(--primary), var(--secondary)),
+                url(images/coffee4.jpg) no-repeat;
+    background-size: cover;
+    background-position:  center;
+    height: calc(100% - 5rem);
+}
+
+.about h1{
+    color: #55210e;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.about p {
+    color: #e9b6a4;
+    font-size: 1.5rem;
+    line-height: 4.88rem;
+}
+/* end of about */
+
+/* recipies */
+#recipies {
+    margin: 25% 7rem 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.price {
+    margin: 1rem 0;
+    font-size: 2.5rem;
+}
+
+#recipies .card {
+    display: flex;
+    height: 336px;
+    width: 70%;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 10px;
+    overflow: hidden
+}
+
+#recipies .even{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.card-details {
+    background-image: linear-gradient(90deg, var(--primary), var(--secondary));
+    min-width: calc(100% - 450px);
+    height: 100%;
+    color: #4b1907;
+    padding: 1rem 2.5rem 2rem;
+    font-size: 1.5rem;
+    line-height: 2.9rem;
+}
+
+.card-img {
+    flex-basis: 108.5%;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-img::after {
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(90deg, var(--primary), var(--secondary));
+    position: absolute;
+    opacity: .7;
+}
+
+.card:hover .card-img img {
+    transform: scale(1.1);
+}
+
+.card-img img{
+    width: 100%;
+    display: block;
+    transition: .7s ease transform;
+}
+
+.type {
+    font-size: 3rem;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    color: #6a2911;
+    font-weight: 500;
+}
+/* end of recipies */
+
+/* contact */
+#contact {
+    margin-top: 25%;
+}
+
+.contact-card {
+    width: 30%;
+    margin-bottom: 3rem;
+    padding: 1rem;
+}
+
+#contact .info {
+    margin: 1rem 3rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+#contact h1 {
+    margin-bottom: 1rem;
+}
+
+.contact-card {
+    display: flex;
+    justify-content: space-between;
+    -webkit-box-shadow: 0px 0px 18px 0 #000003;
+    -moz-box-shadow: 0px 0px 18px 0 #000003;
+    box-shadow: 0px 0px 18px 0 #000003;
+    transition: .7s ease box-shadow;
+    border-radius: 10px;
+}
+
+.contact-card:hover {
+    -webkit-box-shadow: 0px 0px 7px 3px #000003;
+    -moz-box-shadow: 0px 0px 7px 0 #000003;
+    box-shadow: 0px 0px 7px 0 #000003;
+}
+
+.contact-info {
+    padding: 1.5rem;
+    margin-right: 4rem;
+}
+
+.contact-info h2 {
+    font-size: 1.1rem;
+    margin-bottom: .8rem;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.phone, .address {
+    margin-right: 5rem;
+}
+/* end of contact */
+
+/* footer */
+#footer {
+    background-color: rgb(85, 33, 14);
+    margin: 25% 0 0;
+    min-height: 100px;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+#footer .social-icons {
+    margin: 0 auto 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.social-icon a{
+    color: white;
+    font-size: 2rem;
+    margin: 1rem;
+    transition: .7s ease color;
+}
+
+.social-icon:hover a{
+    color: aqua;
+}
+
+#footer p {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+/* end of footer */
+
+@media (max-width: 1495px) {
+
+    /* recipies */
+    .type {
+        font-size: 2rem;
+    }
+    .price {
+        font-size: 2rem;
+    }
+    .card-details {
+        padding: .8rem 2.2rem 1.8rem;
+        font-size: 1.2rem;
+        line-height: 2.5rem;
+    }
+    /* end of recipies */
+
+    /* contact */
+    .contact-card {
+        display: flex;
+        flex-direction: column;
+    }
+    /* end of contact */
+}
+
+@media (max-width: 1286px) {
+
+    .card-details {
+        line-height: 2rem;
+        font-size: 1.1rem;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    /* header */
+    #logo {
+        font-size: 1.5rem; 
+    }
+    #logo span {
+        font-size: 2rem;
+    }
+    .navigation {
+        font-size: 1.5rem;
+    }
+    /* end of header */
+
+    /* about */
+    .about {
+        padding: 10.5rem 5rem 5.5rem;
+    }
+    .about h1 {
+        font-size: 2rem;
+    }
+    .about p {
+        font-size: 1rem;
+    }
+    /* end of about */
+
+    /* recipies */
+    #recipies {
+        max-width: 650px;
+        margin: 25% auto auto;
+    }
+    #recipies .card {
+        height: 671px;
+        width: 69%;
+        flex-direction: column;
+    }
+    .type {
+        font-size: 1.8rem;
+        margin-bottom: 0;
+    }
+    .price {
+        margin: 0;
+        font-size: 1.8rem;
+    }
+    /* end of recipies */
+
+    /* contact */
+    .card-details {
+        line-height: 1.9;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    #contact .info{
+        margin-left: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .contact-card {
+        width: 80%;
+    }
+    .contact-info {
+        margin-right: 2rem;
+        display: flex;
+        justify-content: center;
+    }
+    .contact-info h2 {
+        font-size: 2.1rem;
+        margin-bottom: .8rem;
+    }
+    .contact-info p {
+        font-size: 1.5rem;
+    }
+
+    .contact-info {
+        text-align: center;
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    #contact .icon {
+        text-align: center;
+    }
+    /* end of contact */
+}
+
+@media (max-width: 720px) {
+    /* header */
+    #logo {
+        font-size: 1.1rem; 
+    }
+    #logo span {
+        font-size: 1.3rem;
+    }
+    .navigation {
+        font-size: 1.1rem;
+    }
+    /* end of header */
+
+    /* about */
+    .about {
+        padding: 10.5rem 2rem 5.5rem;
+    }
+    .about h1 {
+        font-size: 2rem;
+    }
+    .about p {
+        font-size: 1rem;
+    }
+    /* end of about */
+
+    /* recipies */
+    #recipies .card{
+        height: 560px;
+    }
+    /* end of recipies */
+
+    /* contact */
+    .contact-card {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contact h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    .contact-info {
+        margin-right: 2rem;
+        display: flex;
+        justify-content: center;
+    }
+    
+
+    .contact-info h2 {
+        font-size: 2.1rem;
+        margin-bottom: .8rem;
+    }
+
+    .contact-info p {
+        font-size: 1.5rem;
+    }
+
+    .contact-info {
+        text-align: center;
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    #contact .icon {
+        text-align: center;
+    }
+    /* end of contact */
+}
+
+@media (max-width: 540px) {
+    /* header */
+    header a {
+        padding: .9rem 1.5rem;
+    }
+    #logo {
+        font-size: 1rem; 
+    }
+    #logo span {
+        font-size: 1.2rem;
+    }
+    .navigation {
+        font-size: 1rem;
+    }
+    /* end of header */
+
+    /* recipies */
+    #recipies .card{
+        height: 500px;
+    }
+    /* end of recipies */
+}
+
+@media (max-width: 500px) {
+    /* header */
+    header a {
+        padding: 1rem 1.5rem;
+    }
+    header {
+        max-width: 500px;
+    }
+    #logo {
+        font-size: .8rem; 
+    }
+    #logo span {
+        font-size: .9rem;
+    }
+    .navigation {
+        font-size: .8rem;
+    }
+    /* end of header */
+
+    /* about */
+    .about {
+        max-width: 500px;
+        padding: 5.5rem .8rem 0;
+    }
+    .about h1 {
+        font-size: 1rem;
+    }
+    .about p {
+        font-size: .6rem;
+    }
+    /* end of about */
+
+    /* recipies */
+    #recipies .card{
+        height: 500px;
+    }
+    /* end of recipies */
+
+    /* contact */
+    .contact-card {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+    #contact {
+    margin-top: 25%;
+    }
+
+    .contact-card {
+        width: 90%;
+    }
+
+    #contact h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    .contact-info {
+        margin-right: 2rem;
+        display: flex;
+        justify-content: center;
+    }
+    
+
+    .contact-info h2 {
+        font-size: 1.1rem;
+        margin-bottom: .8rem;
+    }
+
+    .contact-info p {
+        font-size: .8rem;
+    }
+
+    .contact-info {
+        text-align: center;
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    #contact .icon {
+        text-align: center;
+    }
+    /* end of contact */
+
+    /* footer */
+    #footer .social-icon a{
+        font-size: 1rem;
+    }
+    #footer p {
+        font-size: .8rem;
+    }
+    /* end of footer */
+}
+
+@media (max-width: 400px) {
+    /* header */
+    header a {
+        padding: .8rem 1rem;
+    }
+    /* end of header */
+
+    /* recipies */
+    #recipies .card-img img {
+        width: 110%;
+    }
+    #recipies .card{
+        height: 520px;
+    }
+    /* end of recipies */
+}
+
+@media (max-width: 430px) {
+    /* recipies */
+    #recipies .card{
+        height: 480px;
+    }
+    /* end of recipies */
+}
+
+@media (max-width: 330px) {
+    /* header */
+    header a {
+        padding: .5rem .7rem;
+    }
+    .navigation {
+        font-size: .7rem;
+    }
+    #logo span {
+        font-size: .9rem;
+    }
+    /* end of header */
+
+    /* about */
+    .about {
+        padding: 7.5rem .2rem 2rem;
+    }
+    /* end of about */
+
+    /* recipies */
+    #recipies {
+        max-width: 650px;
+        margin: 25% auto auto;
+    }
+    .card-details {
+        line-height: 1.9;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    .type {
+        font-size: 1rem;
+        margin-bottom: 0;
+    }
+    #recipies .card{
+        height: 370px;
+    }
+    .price {
+        margin: 0;
+        font-size: 1rem;
+    }
+    #recipies .ingredients {
+        font-size: .7rem;
+        margin: 0;
+    }
+    /* end of recipies */
+
+    /* contact */
+    #contact .info{
+        margin-left: 10%;
+    }
+    .contact-card {
+        width: 110%;
+    }
+    /* end of contact */
+
+    /* footer */
+    #footer p {
+        font-size: .6rem;
+    }
+    /* end of footer */
+}
